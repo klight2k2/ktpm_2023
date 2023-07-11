@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basePane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ktpm.controller.sohokhau.SoHoKhauController">
+    <children>
+        <TableView fx:id="tableView" layoutX="38.0" layoutY="125.0" prefHeight="414.0" prefWidth="702.0" stylesheets="@../styles/table.css">
+            <columns>
+                <TableColumn fx:id="indexColumn" prefWidth="41.599971771240234" text="#" />
+                <TableColumn fx:id="maHoKhauColumn" prefWidth="101.5999755859375" text="Mã hộ khẩu" />
+                <TableColumn fx:id="tenChuHoColumn" prefWidth="148.0" text="Tên Chủ Hộ" />
+                <TableColumn fx:id="diaChiColumn" prefWidth="263.0" text="Địa chỉ" />
+            <TableColumn fx:id="soLuongColumn" prefWidth="146.0" text="Số lượng thành viên" />
+            </columns>
+        </TableView>
+        <Text layoutX="38.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý sổ hộ khẩu" textAlignment="CENTER" wrappingWidth="209.9140625">
+            <font>
+                <Font name="Segoe UI" size="24.0" />
+            </font>
+        </Text>
+        <Button layoutX="566.0" layoutY="78.0" mnemonicParsing="false" onAction="#add" styleClass="btn" text="Thêm mới" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Button>
+        <TextField fx:id="searchTextField" layoutX="38.0" layoutY="78.0" onMouseClicked="#search" prefHeight="30.0" prefWidth="297.0" promptText="Lọc theo địa chỉ">
+            <font>
+                <Font name="Segoe UI Italic" size="14.0" />
+            </font>
+        </TextField>
+        <Button layoutX="671.0" layoutY="78.0" mnemonicParsing="false" onAction="#delete" prefHeight="28.0" prefWidth="58.0" styleClass="btn" text="Xoá" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Button>
+        <Pagination fx:id="pagination" layoutX="38.0" layoutY="125.0" prefHeight="478.0" prefWidth="702.0" />
+      <Button layoutX="469.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#tackKhau" styleClass="btn" text="Tách khẩu" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="reload" layoutX="371.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#reload" prefHeight="29.0" prefWidth="67.0" styleClass="btn" text="Tải lại" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

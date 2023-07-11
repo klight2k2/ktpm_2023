@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="441.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ktpm.controller.KhaiTuController">
+   <children>
+      <HBox alignment="BASELINE_LEFT" layoutX="66.0" layoutY="133.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Người khai tử" wrappingWidth="149.6328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" layoutX="66.0" layoutY="174.0" prefHeight="42.0" prefWidth="305.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quan hệ với người chết" wrappingWidth="151.6328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="quanHeField" prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </HBox>
+      <Text layoutX="141.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng kí khai tử" wrappingWidth="170.6328125">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="63.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Người tử vong" wrappingWidth="123.6328125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tenNguoiChetField" layoutX="229.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn Văn A" wrappingWidth="123.6328125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox alignment="BASELINE_LEFT" layoutX="66.0" layoutY="294.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyên nhân tử vong" wrappingWidth="150.6328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="lyDoTuVongField" prefHeight="26.0" prefWidth="156.0" promptText="Nhập lý do ..." />
+         </children>
+      </HBox>
+      <Button layoutX="301.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#onSubmit" styleClass="btn" text="Xác nhận" />
+      <HBox alignment="BASELINE_LEFT" layoutX="68.0" layoutY="216.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày khai" wrappingWidth="149.6328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="ngayKhaiField" prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </HBox>
+      <HBox alignment="BASELINE_LEFT" layoutX="68.0" layoutY="252.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày tử vong" wrappingWidth="150.6328125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="ngayTuVongField" prefHeight="25.0" prefWidth="157.0" />
+         </children>
+      </HBox>
+      <ComboBox fx:id="nguoiKhaiTuBox" layoutX="216.0" layoutY="130.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

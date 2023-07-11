@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ktpm.controller.sohokhau.TachKhauController">
+   <children>
+      <Text layoutX="90.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chủ hộ hiện tại">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="chuHoHienTai" layoutX="197.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn Văn A" />
+      <Text layoutX="409.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã hộ khẩu hiện tại">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="92.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ mới">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <TextField fx:id="diaChiMoiText" layoutX="198.0" layoutY="212.0" prefHeight="25.0" prefWidth="499.0" promptText="Nhập địa chỉ mới" />
+      <Text layoutX="130.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chọn người ở hộ khẩu cũ">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <TableView fx:id="hoKhauCuTable" layoutX="58.0" layoutY="322.0" prefHeight="201.0" prefWidth="268.0">
+        <columns>
+          <TableColumn fx:id="hoTenCuColumn" prefWidth="132.5" text="Họ tên" />
+            <TableColumn fx:id="quanHeCuColumn" prefWidth="133.5" text="Quan hệ với chủ hộ" />
+        </columns>
+      </TableView>
+      <Text layoutX="91.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chủ hộ mới">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <ComboBox fx:id="chuHoBox" layoutX="198.0" layoutY="176.0" prefWidth="150.0" />
+      <Text layoutX="410.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã hộ khẩu mới">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Button layoutX="376.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#denHoKhauMoi" styleClass="btn" text="&gt;&gt;" />
+      <Button layoutX="376.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#veHoKhauCu" styleClass="btn" text="&lt;&lt;" />
+      <Text fx:id="maHoKhauHienTaiText" layoutX="523.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HK00001" textAlignment="CENTER" wrappingWidth="195.625" />
+      <TextField fx:id="maHoKhauMoiText" layoutX="523.0" layoutY="176.0" prefHeight="25.0" prefWidth="171.0" />
+      <TableView fx:id="hoKhauMoiTable" layoutX="452.0" layoutY="322.0" prefHeight="201.0" prefWidth="268.0">
+         <columns>
+            <TableColumn fx:id="hoTenMoiColumn" prefWidth="133.0" text="Họ tên" />
+            <TableColumn fx:id="quanHeMoiColumn" prefWidth="134.0" text="Quan hệ với chủ hộ" />
+         </columns>
+      </TableView>
+      <Text layoutX="501.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Những người sang hộ khẩu mới">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="317.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tách hộ khẩu">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="91.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ hiện tại">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="diaChiHienTai" layoutX="197.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quan Âm, Bắc Hồng, Đông Anh" wrappingWidth="405.009765625" />
+      <Button layoutX="678.0" layoutY="545.0" mnemonicParsing="false" onMouseClicked="#onSubmit" prefHeight="32.0" prefWidth="76.0" styleClass="btn" text="OK" textFill="#2413b9" />
+   </children>
+   <stylesheets>
+      <URL value="@../styles/table.css" />
+      <URL value="@../styles/global.css" />
+   </stylesheets>
+</AnchorPane>

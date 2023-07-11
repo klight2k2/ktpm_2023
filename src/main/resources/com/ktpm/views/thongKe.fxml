@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/global.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ktpm.controller.ThongKeController">
+   <children>
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="158.0" prefHeight="394.0" prefWidth="751.0">
+        <columns>
+            <TableColumn fx:id="indexColumn" prefWidth="40.5" text="#" />
+          <TableColumn fx:id="hoTenColumn" prefWidth="185.5" text="Họ tên" />
+          <TableColumn fx:id="ngaySinhColumn" prefWidth="100.0" text="Ngày sinh" />
+            <TableColumn fx:id="gioiTinhColumn" minWidth="0.0" prefWidth="200.5" text="Giới tính" />
+            <TableColumn fx:id="noiThuongTruColumn" maxWidth="1000.0" prefWidth="221.5" text="Nơi thường trú" />
+        </columns>
+         <stylesheets>
+            <URL value="@../styles/global.css" />
+            <URL value="@../styles/table.css" />
+         </stylesheets>
+      </TableView>
+      <HBox layoutX="25.0" layoutY="79.0" prefHeight="60.0" prefWidth="613.0">
+         <children>
+            <VBox prefHeight="60.0" prefWidth="328.0">
+               <children>
+                  <HBox alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="292.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính" wrappingWidth="81.8505859375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="gioiTinhList" prefHeight="25.0" prefWidth="112.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_LEFT">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Độ tuổi" wrappingWidth="83.52734375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Từ" wrappingWidth="25.341796875" />
+                        <TextField fx:id="tuTuoiField" prefHeight="30.0" prefWidth="45.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="đến" wrappingWidth="30.48046875">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="denTuoiField" prefHeight="30.0" prefWidth="45.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="tuổi">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets right="18.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="65.0" prefWidth="252.0">
+               <children>
+                  <HBox alignment="BASELINE_LEFT">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tình trạng" wrappingWidth="69.828125">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="tinhTrangList" prefHeight="25.0" prefWidth="115.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_LEFT" prefHeight="40.0" prefWidth="245.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Năm" wrappingWidth="66.52734375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Từ" wrappingWidth="25.341796875" />
+                        <TextField fx:id="tuNamField" prefHeight="30.0" prefWidth="50.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="đến" wrappingWidth="30.48046875">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="denNamField" prefHeight="30.0" prefWidth="50.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1.0">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="21.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="656.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#onStatistic" styleClass="btn_primary" text="Thống kê" />
+      <Pagination fx:id="pagination" layoutX="24.0" layoutY="158.0" prefHeight="438.0" prefWidth="751.0" />
+      <Text layoutX="24.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thống kê">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
